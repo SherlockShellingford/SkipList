@@ -1,11 +1,12 @@
-public interface Scalar {
-    Scalar add(Scalar toAdd);
+public abstract class Scalar {
 
-    Scalar pow(int exp);
+    abstract Scalar add(Scalar toAdd);
 
-    Scalar mul(Scalar toMul);
+    abstract Scalar pow(int exp);
 
-    Scalar neg(Scalar toNeg);
+    abstract Scalar mul(Scalar toMul);
 
-    boolean equals(Scalar toCom);
+    abstract Scalar neg();
+
+    abstract boolean equals(Scalar toCom);
 }
