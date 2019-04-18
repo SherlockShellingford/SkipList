@@ -43,6 +43,18 @@ public class RationalScalar extends Scalar{
         return a;
     }
 
+    Scalar mul(int toMul){
+        RationalScalar a = new RationalScalar(this.num,this.den);
+        RationalScalar b = new RationalScalar(toMul, 1);
+        a.setValue(a.getNum()*b.getNum(), a.getDen()*b.getDen());
+        int gcd = gcd(a.getNum(), a.getDen());
+        a.setValue(a.getNum()/gcd, a.getDen()/gcd);
+        if (a.getDen()<0){
+            a.setValue(a.getNum()*(-1), a.getDen()*(-1));
+        }
+        return a;
+    }
+
     Scalar neg(){
         RationalScalar a = new RationalScalar(this.num*(-1),this.den);
         if (a.getDen()<0){

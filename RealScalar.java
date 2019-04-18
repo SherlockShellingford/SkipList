@@ -24,6 +24,11 @@ public class RealScalar extends Scalar {
         return out;
     }
 
+    Scalar mul(int toMul){
+        RealScalar out = new RealScalar(this.value * toMul);
+        return out;
+    }
+
     Scalar neg(){
         RealScalar out = new RealScalar(this.value * (-1));
         return out;

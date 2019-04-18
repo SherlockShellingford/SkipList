@@ -6,6 +6,8 @@ public abstract class Scalar {
 
     abstract Scalar mul(Scalar toMul);
 
+    abstract Scalar mul(int toMul);
+
     abstract Scalar neg();
 
     abstract boolean equals(Scalar toCom);
